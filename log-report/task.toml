@@ -1,0 +1,26 @@
+[task]
+name = "dynamo/log-report"
+description = "Analyze the provided server access log to generate a JSON summary report identifying the top visitor IP address and total error counts."
+artifacts = ["report.json"]
+
+[verifier]
+timeout_sec = 60
+command = "pytest /tests/test_outputs.py"
+reward_path = "/logs/verifier/reward.txt"
+
+[metadata]
+category = "data_analysis"
+subcategory = "log_processing"
+task_objective = "identify_top_ip_and_error_count"
+artifact_type = "json"
+expert_time_estimate_hours = 1.0
+model_tested = "gpt-4o"
+agent_tested = "claude-3-5-sonnet"
+difficulty_explanation = "The task requires parsing structured log files and performing data aggregation."
+solution_explanation = "The oracle solution uses pandas to group by IP and count status codes, outputting the result to JSON."
+verification_explanation = "The verifier ensures the output file exists, follows the correct JSON schema, and contains the accurate aggregated values."
+
+[environment]
+build_context = "./environment"
+allow_internet = false
+mcp_servers = []

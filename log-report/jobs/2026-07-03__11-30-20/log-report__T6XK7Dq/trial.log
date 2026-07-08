@@ -1,0 +1,42 @@
+Trial log-report__T6XK7Dq failed: Docker compose command failed for environment log-report. Command: docker compose --project-name log-report__t6xk7dq__env --project-directory C:\Users\danis\Downloads\fix-task-broken\log-report\environment -f C:\Users\danis\AppData\Local\Temp\tmpdwr_h247\log-report__T6XK7Dq__env-docker-compose-resources.json -f C:\Users\danis\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker-compose-build.yaml -f C:\Users\danis\AppData\Local\Temp\tmpaf7fv2j3\docker-compose-mounts.json -f C:\Users\danis\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker-compose-egress-control.yaml -f C:\Users\danis\AppData\Local\Temp\tmp_kpsyt58\docker-compose-egress-control-services.json build. Return code: 1. Stdout:  Image log-report__t6xk7dq__env-main Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 617B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 548B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.11-slim@sha256:d55e8869894e637651152a5501869850604100572e796e625a6e87f37376c70c
+#3 ...
+
+#4 [auth] library/python:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.11-slim@sha256:d55e8869894e637651152a5501869850604100572e796e625a6e87f37376c70c
+#3 ERROR: docker.io/library/python:3.11-slim@sha256:d55e8869894e637651152a5501869850604100572e796e625a6e87f37376c70c: not found
+------
+ > [internal] load metadata for docker.io/library/python:3.11-slim@sha256:d55e8869894e637651152a5501869850604100572e796e625a6e87f37376c70c:
+------
+Dockerfile:2
+
+--------------------
+
+   1 |     # Pinned to a specific sha256 digest to ensure a deterministic environment
+
+   2 | >>> FROM python:3.11-slim@sha256:d55e8869894e637651152a5501869850604100572e796e625a6e87f37376c70c
+
+   3 |     
+
+   4 |     WORKDIR /app
+
+--------------------
+
+failed to solve: python:3.11-slim@sha256:d55e8869894e637651152a5501869850604100572e796e625a6e87f37376c70c: failed to resolve source metadata for docker.io/library/python:3.11-slim@sha256:d55e8869894e637651152a5501869850604100572e796e625a6e87f37376c70c: docker.io/library/python:3.11-slim@sha256:d55e8869894e637651152a5501869850604100572e796e625a6e87f37376c70c: not found
+
+
+
+View build details: docker-desktop://dashboard/build/default/default/nfqdyxdj5v82eh64pwrcshib1
+
+. Stderr: None. 
+Collecting main service artifacts
